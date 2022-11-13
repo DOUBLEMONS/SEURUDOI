@@ -10,4 +10,18 @@ public class Player_Manager : MonoBehaviour
     {
         Instance = this;
     }
+
+    //Main
+    [Header("Player_Main")]
+    public Rigidbody2D Rigidbody2D;
+
+    //Move
+    [Header("Player_Movement")]
+    public float MoveSpeed;
+    public float Horizontal;
+    public bool IsFacingRight = true;
+
+    //Jump
+    [Header("Player_Jump")]
+    public float JumpPower;
 }
