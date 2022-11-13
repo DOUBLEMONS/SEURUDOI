@@ -9,6 +9,7 @@ public class Player_Manager : MonoBehaviour
     void Awake()
     {
         Instance = this;
+        Application.targetFrameRate = 60;
     }
 
     //Main

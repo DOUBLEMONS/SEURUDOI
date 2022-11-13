@@ -22,7 +22,7 @@ public class Player_MoveRight : MonoBehaviour
         PM.Horizontal = 0;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         PM.Rigidbody2D.velocity = new Vector2(PM.Horizontal * PM.MoveSpeed, PM.Rigidbody2D.velocity.y);
     }
