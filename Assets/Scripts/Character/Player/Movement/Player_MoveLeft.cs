@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,8 @@ public class Player_MoveLeft : MonoBehaviour
     public void PointerDown()
     {
         PM.Horizontal -= 1;
+        PM.Player.transform.rotation = Quaternion.Euler(0, 180, 0);
+        PM.IsFacingRight = false;
     }
 
     public void PointerUp()
@@ -22,7 +25,7 @@ public class Player_MoveLeft : MonoBehaviour
         PM.Horizontal = 0;
     }
 
-    void FixedUpdate()
+    void LateUpdate()
     {
         PM.Rigidbody2D.velocity = new Vector2(PM.Horizontal * PM.MoveSpeed, PM.Rigidbody2D.velocity.y);
     }
