@@ -15,6 +15,8 @@ public class Player_MoveRight : MonoBehaviour
     public void PointerDown()
     {
         PM.Horizontal = 1;
+        PM.Player.transform.rotation = Quaternion.Euler(0, 0, 0);
+        PM.IsFacingRight = true;
     }
 
     public void PointerUp()
@@ -22,7 +24,7 @@ public class Player_MoveRight : MonoBehaviour
         PM.Horizontal = 0;
     }
 
-    void FixedUpdate()
+    void LateUpdate()
     {
         PM.Rigidbody2D.velocity = new Vector2(PM.Horizontal * PM.MoveSpeed, PM.Rigidbody2D.velocity.y);
     }

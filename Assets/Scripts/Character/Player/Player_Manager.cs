@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,11 @@ public class Player_Manager : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        Application.targetFrameRate = 60;
+    }
+
+    void Start()
+    {
+
     }
 
     //Main
@@ -21,8 +26,13 @@ public class Player_Manager : MonoBehaviour
     public float MoveSpeed;
     public float Horizontal;
     public bool IsFacingRight = true;
+    public bool CanMove;
+    public Transform Player;
 
     //Jump
     [Header("Player_Jump")]
     public float JumpPower;
+    public Transform GroundCheck;
+    public LayerMask GroundLayer;
+    public int JumpCount;
 }
