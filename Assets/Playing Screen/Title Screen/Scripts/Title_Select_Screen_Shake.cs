@@ -12,16 +12,15 @@ public class Title_Select_Screen_Shake : MonoBehaviour
     [Range(0.01f, 10f)]
     private float ShakeRange;
 
-    //[SerializeField]
-    //private AnimationCurve AnimationCurve;
-
+    Vector3 InitPos;
+    
     private void Awake()
     {
-
+        InitPos = transform.position;
     }
 
     private void Update()
     {
-        transform.position = new Vector3(0, Mathf.Sin(Time.time * ShakeSpeed) * ShakeRange, 0);
+        transform.position = new Vector3(InitPos.x , Mathf.Sin(Time.time * ShakeSpeed) * ShakeRange + InitPos.y, 0);
     }
 }
