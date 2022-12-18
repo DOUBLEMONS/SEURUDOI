@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class Title_Screen_Fade_Effect : MonoBehaviour
@@ -13,10 +11,6 @@ public class Title_Screen_Fade_Effect : MonoBehaviour
     private Image BackGround;
 
     public Image Touch_to_start;
-    public Image Achievement;
-    public Image Setting;
-    public Image Current_situation;
-    public Image Interlock;
 
     void Awake()
     {
@@ -27,28 +21,20 @@ public class Title_Screen_Fade_Effect : MonoBehaviour
     {
         StartCoroutine(Fade(1, 0));
 
-        Invoke("Return", 1);
+        Invoke("Return", 2);
     }
 
     public void Return()
     {
         Touch_to_start.raycastTarget = true;
-        Achievement.raycastTarget = true;
-        Setting.raycastTarget = true;
-        Current_situation.raycastTarget = true;
-        Interlock.raycastTarget = true;
     }
 
     public void Fade_Out()
     {
         StartCoroutine(Fade(0, 1));
         Touch_to_start.raycastTarget = false;
-        Achievement.raycastTarget = false;
-        Setting.raycastTarget = false;
-        Current_situation.raycastTarget = false;
-        Interlock.raycastTarget = false;
 
-        Invoke("Fade_In", 2);
+        Invoke("Fade_In", 3);
     }
 
     private IEnumerator Fade(float Start, float End)
