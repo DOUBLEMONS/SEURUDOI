@@ -11,6 +11,10 @@ public class Title_Screen_Fade_Effect : MonoBehaviour
     private Image BackGround;
 
     public Image Touch_to_start;
+    public Image Achievement;
+    public Image Current_situation;
+    public Image Interlock;
+    public Image Setting;
 
     void Awake()
     {
@@ -21,20 +25,28 @@ public class Title_Screen_Fade_Effect : MonoBehaviour
     {
         StartCoroutine(Fade(1, 0));
 
-        Invoke("Return", 2);
+        Invoke("Return", 1);
     }
 
     public void Return()
     {
         Touch_to_start.raycastTarget = true;
+        Achievement.raycastTarget = true;
+        Current_situation.raycastTarget = true;
+        Interlock.raycastTarget = true;
+        Setting.raycastTarget = true;
     }
 
     public void Fade_Out()
     {
         StartCoroutine(Fade(0, 1));
         Touch_to_start.raycastTarget = false;
+        Achievement.raycastTarget = false;
+        Current_situation.raycastTarget = false;
+        Interlock.raycastTarget = false;
+        Setting.raycastTarget = false;
 
-        Invoke("Fade_In", 3);
+        Invoke("Fade_In", 2);
     }
 
     private IEnumerator Fade(float Start, float End)
