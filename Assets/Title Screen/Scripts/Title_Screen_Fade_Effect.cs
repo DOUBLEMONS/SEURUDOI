@@ -21,6 +21,7 @@ public class Title_Screen_Fade_Effect : MonoBehaviour
     public GameObject Main_Camera;
     public GameObject GameManager;
     public GameObject RealBackGround;
+    public Canvas FakeBackGround;
 
     void Awake()
     {
@@ -28,26 +29,29 @@ public class Title_Screen_Fade_Effect : MonoBehaviour
         DontDestroyOnLoad(Main_Camera);
         DontDestroyOnLoad(GameManager);
         DontDestroyOnLoad(RealBackGround);
+        DontDestroyOnLoad(FakeBackGround);
     }
 
-    public void Fade_In()
+    /////////////////////////////////////////
+
+    // 다음 장면
+    public void Title_Screen()
+    {
+        StartCoroutine(Fade(1, 0));
+        SceneManager.LoadScene(0);
+    }
+
+    /////////////////////////////////////////
+
+    // 다음 장면
+    public void Assassination_Select_Screen()
     {
         StartCoroutine(Fade(1, 0));
         SceneManager.LoadScene(1);
-
-        Invoke("Return", 1);
     }
 
-    public void Return()
-    {
-        Touch_to_start.raycastTarget = true;
-        Achievement.raycastTarget = true;
-        Current_situation.raycastTarget = true;
-        Interlock.raycastTarget = true;
-        Setting.raycastTarget = true;
-    }
-
-    public void Fade_Out()
+    // 현재 장면
+    public void Touch_To_Start()
     {
         StartCoroutine(Fade(0, 1));
         Touch_to_start.raycastTarget = false;
@@ -56,8 +60,19 @@ public class Title_Screen_Fade_Effect : MonoBehaviour
         Interlock.raycastTarget = false;
         Setting.raycastTarget = false;
 
-        Invoke("Fade_In", 2);
+        Invoke("Assassination_Select_Screen", 2);
     }
+
+    /////////////////////////////////////////
+
+    // 다음 장면
+    public void Assassination_Screen()
+    {
+        StartCoroutine(Fade(1, 0));
+        SceneManager.LoadScene(2);
+    }
+
+    /////////////////////////////////////////
 
     private IEnumerator Fade(float Start, float End)
     {

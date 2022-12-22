@@ -484,7 +484,7 @@ Transform:
   m_Children:
   - {fileID: 2110465244}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &123889411
 GameObject:
@@ -2165,6 +2165,7 @@ MonoBehaviour:
   Main_Camera: {fileID: 1330114593}
   GameManager: {fileID: 1558635655}
   RealBackGround: {fileID: 659158722}
+  FakeBackGround: {fileID: 1765519399}
 --- !u!1 &587682826
 GameObject:
   m_ObjectHideFlags: 0
@@ -3830,7 +3831,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &851640521
 GameObject:
@@ -5426,7 +5427,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 507293261}
         m_TargetAssemblyTypeName: Title_Screen_Fade_Effect, Assembly-CSharp
-        m_MethodName: Fade_Out
+        m_MethodName: Touch_To_Start
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7481,7 +7482,7 @@ GameObject:
   - component: {fileID: 1765519398}
   - component: {fileID: 1765519397}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: FakeBackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7500,8 +7501,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 507293258}
-  m_Father: {fileID: 2110465244}
-  m_RootOrder: 13
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8428,7 +8429,6 @@ Transform:
   - {fileID: 851640522}
   - {fileID: 1789275496}
   - {fileID: 692273640}
-  - {fileID: 1765519396}
   m_Father: {fileID: 122700507}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
