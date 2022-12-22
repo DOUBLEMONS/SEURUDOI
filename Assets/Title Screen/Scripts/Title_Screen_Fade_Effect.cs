@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Title_Screen_Fade_Effect : MonoBehaviour
 {
@@ -16,14 +17,23 @@ public class Title_Screen_Fade_Effect : MonoBehaviour
     public Image Interlock;
     public Image Setting;
 
+    [Header("DontDestroyOnLoad")]
+    public GameObject Main_Camera;
+    public GameObject GameManager;
+    public GameObject RealBackGround;
+
     void Awake()
     {
         BackGround = GetComponent<Image>();
+        DontDestroyOnLoad(Main_Camera);
+        DontDestroyOnLoad(GameManager);
+        DontDestroyOnLoad(RealBackGround);
     }
 
     public void Fade_In()
     {
         StartCoroutine(Fade(1, 0));
+        SceneManager.LoadScene(1);
 
         Invoke("Return", 1);
     }
