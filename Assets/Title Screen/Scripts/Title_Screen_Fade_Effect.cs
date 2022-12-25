@@ -18,7 +18,6 @@ public class Title_Screen_Fade_Effect : MonoBehaviour
     public Image Setting;
 
     [Header("DontDestroyOnLoad")]
-    public GameObject Main_Camera;
     public GameObject GameManager;
     public GameObject RealBackGround;
     public Canvas FakeBackGround;
@@ -26,7 +25,6 @@ public class Title_Screen_Fade_Effect : MonoBehaviour
     void Awake()
     {
         BackGround = GetComponent<Image>();
-        DontDestroyOnLoad(Main_Camera);
         DontDestroyOnLoad(GameManager);
         DontDestroyOnLoad(RealBackGround);
         DontDestroyOnLoad(FakeBackGround);
