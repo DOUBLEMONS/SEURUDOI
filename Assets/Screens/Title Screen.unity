@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 65232005}
   - component: {fileID: 65232004}
   m_Layer: 5
-  m_Name: Canvas (2)
+  m_Name: SaveCloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -379,7 +379,7 @@ RectTransform:
   m_Children:
   - {fileID: 140392546}
   m_Father: {fileID: 2067960931}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -912,7 +912,7 @@ GameObject:
   - component: {fileID: 247377148}
   - component: {fileID: 247377149}
   m_Layer: 0
-  m_Name: Square (5)
+  m_Name: SoundEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1773,7 +1773,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1558635658}
         m_TargetAssemblyTypeName: Title_Screen_Play, Assembly-CSharp
-        m_MethodName: Login
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2650,7 +2650,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 795979229}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1558635661}
+        m_TargetAssemblyTypeName: Title_Screen_Settings, Assembly-CSharp
+        m_MethodName: Settings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &795979229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4394,7 +4406,7 @@ GameObject:
   - component: {fileID: 1424951152}
   - component: {fileID: 1424951153}
   m_Layer: 0
-  m_Name: Square (4)
+  m_Name: BackGroundMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5171,6 +5183,7 @@ GameObject:
   - component: {fileID: 1558635658}
   - component: {fileID: 1558635659}
   - component: {fileID: 1558635660}
+  - component: {fileID: 1558635661}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5239,6 +5252,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04acd161d73e948498abac64d6acf423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1558635661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558635655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b827ad35c9fbe5478618360ce94abe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1569442209
@@ -5781,7 +5806,7 @@ GameObject:
   - component: {fileID: 1789523861}
   - component: {fileID: 1789523860}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: LoadCloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5801,7 +5826,7 @@ RectTransform:
   m_Children:
   - {fileID: 781682555}
   m_Father: {fileID: 2067960931}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6099,7 +6124,7 @@ GameObject:
   - component: {fileID: 2047340978}
   - component: {fileID: 2047340977}
   m_Layer: 5
-  m_Name: Canvas (1)
+  m_Name: DeleteCloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6119,7 +6144,7 @@ RectTransform:
   m_Children:
   - {fileID: 394323915}
   m_Father: {fileID: 2067960931}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6292,9 +6317,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2072389079}
+  - {fileID: 65232003}
   - {fileID: 1789523859}
   - {fileID: 2047340976}
-  - {fileID: 65232003}
   - {fileID: 1424951152}
   - {fileID: 247377148}
   m_Father: {fileID: 2110465244}

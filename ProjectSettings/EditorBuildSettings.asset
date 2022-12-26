@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Screens/Title Screen.unity
     guid: 44cb1a4322b755d4098b175e434f30f5
   - enabled: 1
-    path: Assets/Screens/Assassination Select Screen.unity
+    path: Assets/Screens/Selection Screen.unity
     guid: d4e80e2e86872fb47ba6d971ca869a46
   - enabled: 1
     path: Assets/Screens/Assassination Screen.unity

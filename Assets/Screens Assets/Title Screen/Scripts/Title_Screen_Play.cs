@@ -7,24 +7,24 @@ public class Title_Screen_Play : MonoBehaviour
     string log;
     bool play = false;
 
-    public void Login()
+    public void Play()
     {
         if(play == true)
         {
+            play = false;
+
             GPGSBinder.Inst.Logout();
 
             Debug.Log(log);
-
-            play = false;
         }
         else 
         {
+            play = true;
+
             GPGSBinder.Inst.Login((success, localUser) =>
             log = $"{success}, {localUser.userName}, {localUser.id}, {localUser.state}, {localUser.underage}");
 
             Debug.Log(log);
-
-            play = true;
         }
     }
 }
