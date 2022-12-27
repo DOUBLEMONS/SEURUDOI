@@ -12,6 +12,18 @@ EditorBuildSettings:
     path: Assets/Screens/Selection Screen.unity
     guid: d4e80e2e86872fb47ba6d971ca869a46
   - enabled: 1
-    path: Assets/Screens/Assassination Screen.unity
-    guid: 5313756500aa52a4e96138854043c4d3
+    path: Assets/Screens/Maps/Himeji Castle Screen.unity
+    guid: d5c0519282534264bba56edbe76c3f05
+  - enabled: 1
+    path: Assets/Screens/Maps/Matsumoto Castle Screen.unity
+    guid: 1000d1a33b410c94dbe2685c0db0dfc0
+  - enabled: 1
+    path: Assets/Screens/Maps/Nagoya Castle Screen.unity
+    guid: ad76dafaefd8dd64c83fae2fb9bdca91
+  - enabled: 1
+    path: Assets/Screens/Maps/Osaka Castle Screen.unity
+    guid: cdd9b38fcdab11b4bb5d1b6901838867
+  - enabled: 1
+    path: Assets/Screens/Maps/Matsue Castle Screen.unity
+    guid: 960c8eda8ab996e47924aa09e3f69e77
   m_configObjects: {}
