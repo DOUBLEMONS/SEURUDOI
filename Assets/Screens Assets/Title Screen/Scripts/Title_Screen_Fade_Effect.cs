@@ -17,6 +17,9 @@ public class Title_Screen_Fade_Effect : MonoBehaviour
     public Image Interlock;
     public Image Setting;
 
+    //로그인
+    public GameObject Title_Screen_Play;
+
     [Header("DontDestroyOnLoad")]
     public GameObject GameManager;
     public GameObject RealBackGround;
@@ -28,6 +31,19 @@ public class Title_Screen_Fade_Effect : MonoBehaviour
         DontDestroyOnLoad(GameManager);
         DontDestroyOnLoad(RealBackGround);
         DontDestroyOnLoad(FakeBackGround);
+    }
+
+    void Start()
+    {
+        // 로그인
+        Title_Screen_Play TSP = GameObject.Find("Play_Button").GetComponent<Title_Screen_Play>();
+
+        GPGSBinder.Inst.Login((success, localUser) =>
+        TSP.log = $"{success}, {localUser.userName}, {localUser.id}, {localUser.state},{localUser.underage}");
+
+        Debug.Log(TSP.log);
+
+        TSP.play = true;
     }
 
     /////////////////////////////////////////

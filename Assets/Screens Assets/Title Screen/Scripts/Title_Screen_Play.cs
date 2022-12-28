@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Title_Screen_Play : MonoBehaviour
 {
-    string log;
-    bool play = false;
+    public string log;
+    public bool play = false;
 
     public void Play()
     {
