@@ -141,9 +141,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 78
-        width: 59
-        height: 58
+        y: 88
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,10 +161,10 @@ TextureImporter:
       name: Setting board_2
       rect:
         serializedVersion: 2
-        x: 80
-        y: 110
-        width: 25
-        height: 26
+        x: 72
+        y: 88
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,10 +182,10 @@ TextureImporter:
       name: Setting board_3
       rect:
         serializedVersion: 2
-        x: 112
-        y: 116
-        width: 238
-        height: 14
+        x: 144
+        y: 104
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,10 +203,10 @@ TextureImporter:
       name: Setting board_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 14
-        width: 59
-        height: 58
+        x: 240
+        y: 104
+        width: 192
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,10 +224,10 @@ TextureImporter:
       name: Setting board_5
       rect:
         serializedVersion: 2
-        x: 80
-        y: 14
-        width: 97
-        height: 77
+        x: 480
+        y: 104
+        width: 192
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,10 +245,10 @@ TextureImporter:
       name: Setting board_6
       rect:
         serializedVersion: 2
-        x: 196
-        y: 14
-        width: 98
-        height: 77
+        x: 0
+        y: 8
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,7 +266,49 @@ TextureImporter:
       name: Setting board_7
       rect:
         serializedVersion: 2
-        x: 313
+        x: 71
+        y: 8
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2069107cff257e34e8f8e6d11494304b
+      internalID: -820475614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Setting board_8
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 14
+        width: 97
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2edd8b1d33ab91945a456ff0d63ba0a6
+      internalID: -19511747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Setting board_9
+      rect:
+        serializedVersion: 2
+        x: 260
         y: 14
         width: 98
         height: 77
@@ -277,8 +319,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2069107cff257e34e8f8e6d11494304b
-      internalID: -820475614
+      spriteID: f9fa249d6cb002e43ad5971ba56a30c5
+      internalID: -1739635056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Setting board_10
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 14
+        width: 98
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41cde545a10f1d84f8815233ab3fe405
+      internalID: 458345807
       vertices: []
       indices: 
       edges: []
@@ -295,10 +358,13 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Setting board_4: -1192156777
+      Setting board_9: -1739635056
       Setting board_5: 954186819
       Setting board_6: 1277673787
       Setting board_1: 1591988053
       Setting board_3: -1740453330
+      Setting board_8: -19511747
+      Setting board_10: 458345807
       Setting board_2: 2104185821
       Setting board_0: -651368756
       Setting board_7: -820475614
