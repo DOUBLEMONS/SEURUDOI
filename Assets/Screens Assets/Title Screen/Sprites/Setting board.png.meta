@@ -346,6 +346,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Setting board_11
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 14
+        width: 98
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b80fbbab97ed8547ab5b5ee4eb3f10b
+      internalID: 1854070801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -366,6 +387,7 @@ TextureImporter:
       Setting board_8: -19511747
       Setting board_10: 458345807
       Setting board_2: 2104185821
+      Setting board_11: 1854070801
       Setting board_0: -651368756
       Setting board_7: -820475614
   spritePackingTag: 

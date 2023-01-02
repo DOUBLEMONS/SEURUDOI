@@ -11,28 +11,10 @@ public class Fade_Effect : MonoBehaviour
     private float FadeTime;
     public Image BackGround;
 
-    ////로그인
-    //public GameObject Title_Screen_Play;
-
     void Awake()
     {
 
     }
-
-    //void Start()
-    //{
-    //    // 로그인
-    //    Title_Screen_Play TSP = GameObject.Find("Play_Button").GetComponent<Title_Screen_Play>();
-
-    //    GPGSBinder.Inst.Login((success, localUser) =>
-    //    TSP.log = $"{success}, {localUser.userName}, {localUser.id}, {localUser.state},{localUser.underage}");
-
-    //    Debug.Log(TSP.log);
-
-    //    TSP.play = true;
-    //}
-
-    ///////////////////////////////////////////
 
     // 버튼
     public void Touch_To_Start()

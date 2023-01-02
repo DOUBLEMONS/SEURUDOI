@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public GameObject GuideBoard;
     public GameObject ButttonBoard;
 
+    //·Î±×ÀÎ
+    public GameObject TSP;
+
     void Awake()
     {
         DontDestroyOnLoad(GameManagers);
@@ -18,5 +21,10 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(FadeEffect);
         DontDestroyOnLoad(GuideBoard);
         DontDestroyOnLoad(ButttonBoard);
+    }
+
+    void Start()
+    {
+        TSP.GetComponent<Title_Screen_Play>().Login();
     }
 }
