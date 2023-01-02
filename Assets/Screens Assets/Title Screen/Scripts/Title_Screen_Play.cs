@@ -19,7 +19,7 @@ public class Title_Screen_Play : MonoBehaviour
         }
         else if(play == false)
         {
-            play = true;
+            Login();
         }
     }
 
