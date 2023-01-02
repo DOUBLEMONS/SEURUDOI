@@ -26,10 +26,10 @@
 //        ScrollPageValues = new float[transform.childCount];
 
 //        // 스크롤 되는 페이지 사이의 거리 
-//        ValueDistance = 1f / (ScrollPageValues.Length - 1f); 
+//        ValueDistance = 1f / (ScrollPageValues.Length - 1f);
 
 //        // 스크롤 되는 페이지의 각 value 위치 설정 [0 <= value <= 1]
-//        for(int i = 0; i < ScrollPageValues.Length; ++i)
+//        for (int i = 0; i < ScrollPageValues.Length; ++i)
 //        {
 //            ScrollPageValues[i] = ValueDistance * i;
 //        }
@@ -60,14 +60,14 @@
 //        // 현재 Swipe를 진행중이면 터치 불가 
 //        if (IsSwipeMode == true) return;
 
-//        #if UNITY_EDITOR
+//#if UNITY_EDITOR
 //        // 마우스 왼쪽 버튼을 눌렀을 때 1회
-//        if(Input.GetMouseButtonDown(0))
+//        if (Input.GetMouseButtonDown(0))
 //        {
 //            // 터치 시작 지점 (Swipe 방향 구분)
 //            StartTouchX = Input.mousePosition.x;
 //        }
-//        else if(Input.GetButtonUp(0))
+//        else if (Input.GetButtonUp(0))
 //        {
 //            // 터치 종료 시점 (Swipe 방향 구분)
 //            EndTouchY = Input.mousePosition.x;
