@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Title_Screen_Play : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Title_Screen_Play : MonoBehaviour
 
     public GameObject GuideBoard;
     public GameObject LogoutBoard;
+    public Image Play_Button;
 
     public void Play()
     {
@@ -21,6 +23,8 @@ public class Title_Screen_Play : MonoBehaviour
         {
             Login();
         }
+
+        Play_Button.raycastTarget = false;
     }
 
     public void Login()
@@ -32,7 +36,9 @@ public class Title_Screen_Play : MonoBehaviour
 
         Debug.Log(log);
 
-        Invoke("Reset", 1);
+        Play_Button.raycastTarget = false;
+
+        Invoke("Return", 0.5f);
     }
 
     public void Logout()
@@ -43,12 +49,16 @@ public class Title_Screen_Play : MonoBehaviour
 
         Debug.Log(log);
 
-        Invoke("Reset", 1);
+        Play_Button.raycastTarget = false;
+
+        Invoke("Return", 0.5f);
     }
 
-    private void Reset()
+    private void Return()
     {
         GuideBoard.SetActive(false);
         LogoutBoard.SetActive(false);
+
+        Play_Button.raycastTarget = true;
     }
 }
