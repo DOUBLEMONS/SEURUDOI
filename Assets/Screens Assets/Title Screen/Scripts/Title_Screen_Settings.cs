@@ -12,7 +12,11 @@ public class Title_Screen_Settings : MonoBehaviour
     public GameObject SettingBoard;
     public Image Setting_Button;
 
-    public string log;
+    public GameObject SaveBoard;
+    public GameObject LoadBoard;
+    public GameObject DeleteBoard;
+
+    string log;
 
     public void Settings()
     {
@@ -24,32 +28,61 @@ public class Title_Screen_Settings : MonoBehaviour
 
     public void Wait()
     {
-        Invoke("Return", 0.5f);
+        Invoke("Return", 0.25f);
     }
 
     private void Return()
     {
         GuideBoard.SetActive(false);
         SettingBoard.SetActive(false);
+        SaveBoard.SetActive(false);
+        LoadBoard.SetActive(false);
+        DeleteBoard.SetActive(false);
 
-        Setting_Button.raycastTarget = true;
+    Setting_Button.raycastTarget = true;
+    }
+
+    public void Save()
+    {
+        Invoke("SaveCloud", 0.25f);
     }
 
     public void SaveCloud()
     {
-        GPGSBinder.Inst.SaveCloud("mysave", "want data", success => log = $"{success}");
-        Debug.Log(log);
+        GuideBoard.SetActive(true);
+        SaveBoard.SetActive(true);
+
+        GuideBoard.GetComponent<GuideBoard_Damping_Move>().PanelDown();
+    }
+
+    public void Load()
+    {
+        Invoke("LoadCloud", 0.25f);
     }
 
     public void LoadCloud()
     {
-        GPGSBinder.Inst.LoadCloud("mysave", (success, data) => log = $"{success}, {data}");
-        Debug.Log(log);
+        GuideBoard.SetActive(true);
+        LoadBoard.SetActive(true);
+
+        GuideBoard.GetComponent<GuideBoard_Damping_Move>().PanelDown();
+    }
+
+    public void Delete()
+    {
+        Invoke("DeleteCloud", 0.25f);
     }
 
     public void DeleteCloud()
     {
-        GPGSBinder.Inst.DeleteCloud("mysave", success => log = $"{success}");
-        Debug.Log(log);
+        GuideBoard.SetActive(true);
+        DeleteBoard.SetActive(true);
+
+        GuideBoard.GetComponent<GuideBoard_Damping_Move>().PanelDown();
+    }
+
+    public void CloudWait()
+    {
+        Invoke("Return", 0.25f);
     }
 }

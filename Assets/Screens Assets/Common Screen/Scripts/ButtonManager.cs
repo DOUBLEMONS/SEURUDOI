@@ -23,7 +23,7 @@ public class ButtonManager : MonoBehaviour
         
     }
 
-    public void Button_Activation()
+    public void Title_Button_Activation()
     {
         Touch_To_Start.raycastTarget = true;
         Achievement.raycastTarget = true;
@@ -32,7 +32,7 @@ public class ButtonManager : MonoBehaviour
         Setting.raycastTarget = true;
     }
 
-    public void Button_Disabled()
+    public void Title_Button_Disabled()
     {
         Touch_To_Start.raycastTarget = false;
         Achievement.raycastTarget = false;
