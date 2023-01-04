@@ -13,8 +13,6 @@ public class GPGSBinder
     static GPGSBinder inst = new GPGSBinder();
     public static GPGSBinder Inst => inst;
 
-
-
     ISavedGameClient SavedGame =>
         PlayGamesPlatform.Instance.SavedGame;
 
@@ -67,7 +65,7 @@ public class GPGSBinder
     public void LoadCloud(string fileName, Action<bool, string> onCloudLoaded = null)
     {
         SavedGame.OpenWithAutomaticConflictResolution(fileName, DataSource.ReadCacheOrNetwork,
-            ConflictResolutionStrategy.UseLastKnownGood, (status, game) =>
+            ConflictResolutionStrategy.UseLastKnownGood, (status, game) => 
             {
                 if (status == SavedGameRequestStatus.Success)
                 {

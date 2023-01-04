@@ -11,16 +11,18 @@ public class ButtonManager : MonoBehaviour
     public Image Play;
     public Image Setting;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject GuideBoard;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if(GuideBoard.activeSelf == false)
+        {
+            Title_Button_Activation();
+        }
+        else
+        {
+            Title_Button_Disabled();    
+        }
     }
 
     public void Title_Button_Activation()

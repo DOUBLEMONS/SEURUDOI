@@ -5,6 +5,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using GooglePlayGames.BasicApi;
+using UnityEditor.Rendering.LookDev;
 
 public class Title_Screen_Settings : MonoBehaviour
 {
@@ -16,7 +18,7 @@ public class Title_Screen_Settings : MonoBehaviour
     public GameObject LoadBoard;
     public GameObject DeleteBoard;
 
-    string log;
+    public string log;
 
     public void Settings()
     {
@@ -39,7 +41,7 @@ public class Title_Screen_Settings : MonoBehaviour
         LoadBoard.SetActive(false);
         DeleteBoard.SetActive(false);
 
-    Setting_Button.raycastTarget = true;
+        Setting_Button.raycastTarget = true;
     }
 
     public void Save()
@@ -55,6 +57,12 @@ public class Title_Screen_Settings : MonoBehaviour
         GuideBoard.GetComponent<GuideBoard_Damping_Move>().PanelDown();
     }
 
+    public void SaveCloudConfirm()
+    {
+        //GPGSBinder.Inst.SaveCloud("mysave", "want data", success => log = $"{success}");
+        Debug.Log("SaveCloud");
+    }
+
     public void Load()
     {
         Invoke("LoadCloud", 0.25f);
@@ -68,6 +76,12 @@ public class Title_Screen_Settings : MonoBehaviour
         GuideBoard.GetComponent<GuideBoard_Damping_Move>().PanelDown();
     }
 
+    public void LoadCloudConfirm()
+    {
+        //GPGSBinder.Inst.LoadCloud("mysave", (success, data) => log = $"{success}, {data}");
+        Debug.Log("LoadCloud");
+    }
+
     public void Delete()
     {
         Invoke("DeleteCloud", 0.25f);
@@ -79,6 +93,12 @@ public class Title_Screen_Settings : MonoBehaviour
         DeleteBoard.SetActive(true);
 
         GuideBoard.GetComponent<GuideBoard_Damping_Move>().PanelDown();
+    }
+
+    public void DeleteCloudConfirm()
+    {
+        //GPGSBinder.Inst.DeleteCloud("mysave", success => log = $"{success}");
+        Debug.Log("DeleteCloud");
     }
 
     public void CloudWait()

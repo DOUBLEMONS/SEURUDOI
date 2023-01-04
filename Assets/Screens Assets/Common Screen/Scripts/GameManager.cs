@@ -8,8 +8,6 @@ public class GameManager : MonoBehaviour
     public GameObject GameManagers;
     public GameObject BackGround;
     public Canvas FadeEffect;
-    public GameObject GuideBoard;
-    public GameObject ButttonBoard;
 
     //·Î±×ÀÎ
     public GameObject TSP;
@@ -19,8 +17,6 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(GameManagers);
         DontDestroyOnLoad(BackGround);
         DontDestroyOnLoad(FadeEffect);
-        DontDestroyOnLoad(GuideBoard);
-        DontDestroyOnLoad(ButttonBoard);
     }
 
     void Start()
