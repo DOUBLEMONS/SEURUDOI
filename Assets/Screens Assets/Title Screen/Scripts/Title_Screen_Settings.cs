@@ -1,12 +1,8 @@
-using GooglePlayGames.BasicApi.Events;
-using GooglePlayGames.BasicApi.SavedGame;
-using GooglePlayGames;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using GooglePlayGames.BasicApi;
-using UnityEditor.Rendering.LookDev;
+
 
 public class Title_Screen_Settings : MonoBehaviour
 {
@@ -18,6 +14,10 @@ public class Title_Screen_Settings : MonoBehaviour
     public GameObject LoadBoard;
     public GameObject DeleteBoard;
 
+    public Image SaveBoard_Button;
+    public Image LoadBoard_Button;
+    public Image DeleteBoard_Button;
+
     public string log;
 
     public void Settings()
@@ -26,6 +26,18 @@ public class Title_Screen_Settings : MonoBehaviour
         SettingBoard.SetActive(true);
 
         Setting_Button.raycastTarget = false;
+        SaveBoard_Button.raycastTarget = false;
+        LoadBoard_Button.raycastTarget = false;
+        DeleteBoard_Button.raycastTarget = false;
+
+        Invoke("ButtonOn", 0.75f);
+    }
+
+    private void ButtonOn()
+    {
+        SaveBoard_Button.raycastTarget = true;
+        LoadBoard_Button.raycastTarget = true;
+        DeleteBoard_Button.raycastTarget = true;
     }
 
     public void Wait()
@@ -59,7 +71,7 @@ public class Title_Screen_Settings : MonoBehaviour
 
     public void SaveCloudConfirm()
     {
-        //GPGSBinder.Inst.SaveCloud("mysave", "want data", success => log = $"{success}");
+        GPGSBinder.Inst.SaveCloud("mysave", "want data", success => log = $"{success}");
         Debug.Log("SaveCloud");
     }
 
@@ -78,7 +90,7 @@ public class Title_Screen_Settings : MonoBehaviour
 
     public void LoadCloudConfirm()
     {
-        //GPGSBinder.Inst.LoadCloud("mysave", (success, data) => log = $"{success}, {data}");
+        GPGSBinder.Inst.LoadCloud("mysave", (success, data) => log = $"{success}, {data}");
         Debug.Log("LoadCloud");
     }
 
@@ -97,7 +109,7 @@ public class Title_Screen_Settings : MonoBehaviour
 
     public void DeleteCloudConfirm()
     {
-        //GPGSBinder.Inst.DeleteCloud("mysave", success => log = $"{success}");
+        GPGSBinder.Inst.DeleteCloud("mysave", success => log = $"{success}");
         Debug.Log("DeleteCloud");
     }
 

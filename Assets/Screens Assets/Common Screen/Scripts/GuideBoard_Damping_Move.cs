@@ -14,8 +14,8 @@ public class GuideBoard_Damping_Move : MonoBehaviour
     public void PanelDown()
     {
         CanvasGroup.alpha = 0f;
-        RectTransform.transform.localPosition = new Vector3(0, 0f, 0);
-        RectTransform.DOAnchorPos(new Vector2(0f, -20f), FadeTimeDown, false).SetEase(Ease.InOutElastic);
+        RectTransform.transform.localPosition = new Vector3(0f, 0f, 0f);
+        RectTransform.DOAnchorPos(new Vector2(0f, -20f), FadeTimeDown, false).SetEase(Ease.OutElastic);
         CanvasGroup.DOFade(1, FadeTimeDown);
     }
 
@@ -23,8 +23,8 @@ public class GuideBoard_Damping_Move : MonoBehaviour
     {
         CanvasGroup.alpha = 1f;
         RectTransform.transform.localPosition = new Vector3(0f, -20f, 0f);
-        RectTransform.DOAnchorPos(new Vector2(0f, 0f), FadeTimeUp, false).SetEase(Ease.InQuint);
-        CanvasGroup.DOFade(1, FadeTimeUp);
+        RectTransform.DOAnchorPos(new Vector2(0f, 0f), FadeTimeUp, false).SetEase(Ease.InOutQuint);
+        CanvasGroup.DOFade(0, FadeTimeUp);
     }
 }
 

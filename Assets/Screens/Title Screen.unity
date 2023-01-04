@@ -10304,6 +10304,9 @@ MonoBehaviour:
   SaveBoard: {fileID: 1496634213}
   LoadBoard: {fileID: 786894049}
   DeleteBoard: {fileID: 1838067426}
+  SaveBoard_Button: {fileID: 1728423664}
+  LoadBoard_Button: {fileID: 2090253818}
+  DeleteBoard_Button: {fileID: 1406816446}
   log: 
 --- !u!114 &1558635662
 MonoBehaviour:

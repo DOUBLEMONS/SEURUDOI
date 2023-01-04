@@ -19,7 +19,7 @@ public class ButtonManager : MonoBehaviour
         {
             Title_Button_Activation();
         }
-        else
+        else if(GuideBoard.activeSelf == true)
         {
             Title_Button_Disabled();    
         }
@@ -36,6 +36,7 @@ public class ButtonManager : MonoBehaviour
 
     public void Title_Button_Disabled()
     {
+        GuideBoard.SetActive(true);    
         Touch_To_Start.raycastTarget = false;
         Achievement.raycastTarget = false;
         Leader_Board.raycastTarget = false;

@@ -1,5 +1,5 @@
-lastUpgrade=01014
-proj.pluginVersion=0.10.14
+lastUpgrade=01012
+proj.pluginVersion=0.10.12
 proj.AppId=830654724508
 and.BundleId=com.STRAIGHT.SEURUDOI
 proj.classDir=Assets

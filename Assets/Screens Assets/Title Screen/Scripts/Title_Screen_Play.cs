@@ -19,8 +19,9 @@ public class Title_Screen_Play : MonoBehaviour
             GuideBoard.SetActive(true);
             LogoutBoard.SetActive(true);
         }
-        else if(play == false)
+        else if (play == false)
         {
+            GuideBoard.SetActive(true);
             Login();
         }
 
@@ -29,6 +30,8 @@ public class Title_Screen_Play : MonoBehaviour
 
     public void Login()
     {
+        Play_Button.raycastTarget = false;
+
         play = true;
 
         GPGSBinder.Inst.Login((success, localUser) =>
@@ -36,22 +39,20 @@ public class Title_Screen_Play : MonoBehaviour
 
         Debug.Log(log);
 
-        Play_Button.raycastTarget = false;
-
-        Invoke("Return", 0.5f);
+        Invoke("Return", 0.25f);
     }
 
     public void Logout()
     {
+        Play_Button.raycastTarget = false;
+
         play = false;
 
         GPGSBinder.Inst.Logout();
 
         Debug.Log(log);
 
-        Play_Button.raycastTarget = false;
-
-        Invoke("Return", 0.5f);
+        Invoke("Return", 0.25f);
     }
 
     private void Return()

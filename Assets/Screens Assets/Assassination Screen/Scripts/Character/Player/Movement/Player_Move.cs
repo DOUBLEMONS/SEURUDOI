@@ -15,8 +15,6 @@ public class Player_Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float H = PM.FixedJoystick.Horizontal;
 
-        PM.Rigidbody2D.velocity = new Vector3(H, 0, 0) * PM.speed;
     }
 }

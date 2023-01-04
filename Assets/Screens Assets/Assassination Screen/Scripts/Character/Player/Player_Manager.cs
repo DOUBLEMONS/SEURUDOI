@@ -11,18 +11,4 @@ public class Player_Manager : MonoBehaviour
     {
         Instance = this;
     }
-
-    void Start()
-    {
-
-    }
-
-    //Main
-    [Header("Player_Main")]
-    public Rigidbody2D Rigidbody2D;
-
-    //Main
-    [Header("Player_Move")]
-    public FixedJoystick FixedJoystick;
-    public float speed;
 }
