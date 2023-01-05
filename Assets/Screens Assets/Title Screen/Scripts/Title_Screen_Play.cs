@@ -11,6 +11,7 @@ public class Title_Screen_Play : MonoBehaviour
     public GameObject GuideBoard;
     public GameObject LogoutBoard;
     public Image Play_Button;
+    public GameObject Canvas;
 
     public void Play()
     {
@@ -18,10 +19,13 @@ public class Title_Screen_Play : MonoBehaviour
         {
             GuideBoard.SetActive(true);
             LogoutBoard.SetActive(true);
+            Canvas.SetActive(true);
+            GuideBoard.GetComponent<GuideBoard_Damping_Move>().PanelDown();
         }
         else if (play == false)
         {
             GuideBoard.SetActive(true);
+            Canvas.SetActive(false);
             Login();
         }
 
