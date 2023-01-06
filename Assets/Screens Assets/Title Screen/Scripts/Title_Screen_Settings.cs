@@ -10,11 +10,9 @@ public class Title_Screen_Settings : MonoBehaviour
     public GameObject SettingBoard;
     public Image Setting_Button;
 
-    public GameObject SaveBoard;
     public GameObject LoadBoard;
     public GameObject DeleteBoard;
 
-    public Image SaveBoard_Button;
     public Image LoadBoard_Button;
     public Image DeleteBoard_Button;
 
@@ -26,7 +24,6 @@ public class Title_Screen_Settings : MonoBehaviour
         SettingBoard.SetActive(true);
 
         Setting_Button.raycastTarget = false;
-        SaveBoard_Button.raycastTarget = false;
         LoadBoard_Button.raycastTarget = false;
         DeleteBoard_Button.raycastTarget = false;
 
@@ -35,7 +32,6 @@ public class Title_Screen_Settings : MonoBehaviour
 
     private void ButtonOn()
     {
-        SaveBoard_Button.raycastTarget = true;
         LoadBoard_Button.raycastTarget = true;
         DeleteBoard_Button.raycastTarget = true;
     }
@@ -49,24 +45,10 @@ public class Title_Screen_Settings : MonoBehaviour
     {
         GuideBoard.SetActive(false);
         SettingBoard.SetActive(false);
-        SaveBoard.SetActive(false);
         LoadBoard.SetActive(false);
         DeleteBoard.SetActive(false);
 
         Setting_Button.raycastTarget = true;
-    }
-
-    public void Save()
-    {
-        Invoke("SaveCloud", 0.25f);
-    }
-
-    public void SaveCloud()
-    {
-        GuideBoard.SetActive(true);
-        SaveBoard.SetActive(true);
-
-        GuideBoard.GetComponent<GuideBoard_Damping_Move>().PanelDown();
     }
 
     public void Load()
